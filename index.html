@@ -1,29 +1,219 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Cucao Travel</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Blackboard Station</title>
 	<style>
 		h1{
-			background-color: teal; 
+			color: gray;
+			background-color: black; 
 			width: auto;
 			height: 100px;
 			padding: 30px;
 			font-family: "Courier New";
 			font-size: 50px; 
 			text-align: center;
-			border: 5px dotted springgreen;
+			border: 5px dotted #33E1D9;
 
+		}
+
+			.row {
+			  display: flex;
+			}
+
+			.column {
+			  flex: 33.33%;
+			  padding: 5px;
+			}
+
+		body{font-family: "Lato", sans-serif; background-color: black }
+
+		
+
+			.sidenav {
+			  height: 100%;
+			  width: 0;
+			  position: fixed;
+			  z-index: 1;
+			  top: 0;
+			  left: 0;
+			  background-color: #111;
+			  overflow-x: hidden;
+			  transition: 0.5s;
+			  padding-top: 60px;
+			}
+
+			.sidenav a {
+			  padding: 8px 8px 8px 32px;
+			  text-decoration: none;
+			  font-size: 25px;
+			  color: #818181;
+			  display: block;
+			  transition: 0.3s;
+			}
+
+			.sidenav a:hover {
+			  color: #33E1D9;
+			}
+
+			.sidenav .closebtn {
+			  position: absolute;
+			  top: 0;
+			  right: 25px;
+			  font-size: 36px;
+			  margin-left: 50px;
+			}
+
+			@media screen and (max-height: 450px) {
+			  .sidenav {padding-top: 15px;}
+			  .sidenav a {font-size: 18px;}
+			}
+
+		<!-- Neonbutton  -->
+		.neonbutton{
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			background: #031321; 
+			font-family: consolas;
+		}
+
+		.neonbutton a{
+			position: relative;
+			display: inline-block;
+			padding: 15px 30px;
+			color: #33E1D9;
+			text-transform: uppercase;
+			letter-spacing: 4px;
+			text-decoration: none;
+			font-size: 24px;
+			overflow: hidden;
+			transition: 0.2s;
+		}
+
+		.neonbutton a:hover{
+			color: #255784;
+			background: #33E1D9;
+			box-shadow: 0 0 10px #33E1D9, 0 0 40px #33E1D9, 0 0 80px #33E1D9;
+			transition-delay: 1s;
+		}
+
+		.neonbutton a span
+		{
+			position: absolute;
+			display: block;
+				}
+
+		.neonbutton a span:nth-child(1)
+		{
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 2px;
+			background: linear-gradient(90deg, transparent, #33E1D9);
+		}
+
+		.neonbutton a:hover span:nth-child(1){
+			left: 100%;
+			transition: 1s;
+		}
+
+		.neonbutton a span:nth-child(3)
+		{
+			bottom: 0;
+			right: -100%;
+			width: 100%;
+			height: 2px;
+			background: linear-gradient(270deg, transparent, #33E1D9);
+		}
+
+		.neonbutton a:hover span:nth-child(3){
+			right: 100%;
+			transition: 1s;
+			transition-delay: 0.5s;
+		}
+
+		.neonbutton a span:nth-child(2)
+		{
+			top: -100%;
+			right: 0;
+			width: 2px;
+			height: 100%;
+			background: linear-gradient(180deg, transparent, #33E1D9);
+		}
+
+		.neonbutton a:hover span:nth-child(2){
+			top: 100%;
+			transition: 1s;
+			transition-delay: 0.25s;
+		}
+
+		.neonbutton a span:nth-child(4)
+		{
+			bottom: -100%;
+			left: 0;
+			width: 2px;
+			height: 50%;
+			background: linear-gradient(360deg, transparent, #33E1D9);
+		}
+
+		.neonbutton a:hover span:nth-child(4){
+			bottom: 100%;
+			transition: 1s;
+			transition-delay: 0.75s;
 		}
 	</style>
     </head>
 	<body>
-		<h1> Cucao Travel  </h1>
+		<h1> Blackboard Station </h1>
+
+		<span style="color:#818181; font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu </span>
+
+		<script>
+		function openNav() {
+		  document.getElementById("mySidenav").style.width = "250px";
+		}
+
+		function closeNav() {
+		  document.getElementById("mySidenav").style.width = "0";
+		}
+		</script>
+
+		<div id="mySidenav" class="sidenav">
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		  <a href="#">About</a>
+		  <a href="#">Snake</a>
+		</div>
         
-		<center> <img src= Cucao.jpg alt= "Visit Muelle de las Almas!"> </center>
+		<div class="row">
+  			<div class="column">
+    			<a href = "inboard1/inboard1.html"> <img src="blackboard1.jpg" alt="Snow" style="width:100%"> </a>
+ 			</div>
+  			<div class="column">
+    			<a href = inboard2/inboard2.html> <img src="blackboard2.jpg" alt="Forest" style="width:100%"> </a>
+  			</div>
+  			<div class="column">
+    			<img src="blackboard3.jpg" alt="Mountains" style="width:100%">
+  			</div>
+		</div>
 
-		<h2> <center> Cucao is a rural area located in the Greater Island of Chiloé with wonderful native forests and crystalline lakes and beaches to explore. Daily departures directly from Castro. Come to visit its beautiful landscapes! </center> </h2>
+		<img src="idxplatform.png" width="1325" height="35">
 
-		<h2> <center> Check bus schedule <a href = buses.html> here </a> </h2> </center>
+		<h2> <center><p style="color:gray"> Welcome to the first version of this station. If you're new here, please, follow me. </p></center>  </h2>
+
+	<center><div class="neonbutton"><a href= userlog.html>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		Start
+	</a>
+	</div> </center>
+	
+	<!-- <h3> <center> <a href = userlog.html> Start </a> </center> </h3> -->
 		
 
 	</body>

@@ -1,0 +1,40 @@
+/* stylesheet of inboard1.html */
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 160vh;
+    background-color: black;
+    color: gray;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+div {
+   justify-content: center;
+    align-items: center;
+}
+
+p{ text-align: justify; }
+.progressBar[value] {
+    /* Reset the default appearance */
+    -webkit-appearance: none; /* Chrome / Safari / Opera */
+    -moz-appearance: none; /* Firefox */
+    appearance: none;
+
+    
+    /* Get rid of default border in Firefox. */
+    border: none;
+    
+    width: 1000px;
+    height: 30px;
+    margin-bottom: 30px;
+}  
+
+.progressBar[value]::-webkit-progress-bar {
+    background-color: #95a6b1;
+   }
+
+.progressBar[value]::-moz-progress-bar {
+    background-color: #95a6b1;
+}
